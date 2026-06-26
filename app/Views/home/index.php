@@ -33,6 +33,27 @@
 
 /* ── Gold gradient text ── */
 .grad-text{background:linear-gradient(120deg,var(--saffron),var(--gold) 45%,var(--maroon));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:700}
+
+.btn-gold{
+    background: #fbc04a;
+    border-color: #fbc04a;
+    color: #000;
+    transition: all .3s ease;
+}
+
+.btn-gold:hover{
+    background: #870000;
+    border-color: #870000;
+    color: #fff;
+}
+
+.btn-gold:focus,
+.btn-gold:active{
+    background: #870000;
+    border-color: #870000;
+    color: #fff;
+}
+
 </style>
 
 <!-- ══════════════════════════════════════
@@ -77,7 +98,7 @@
 
     <!-- LEFT: copy, left-aligned -->
     <div style="text-align:center" class="hero-copy">
-      <div class="h-badge" style="display:inline-flex;align-items:center;gap:9px;background:var(--maroon);border-radius:50px;padding:8px 22px 8px 14px;margin-bottom:22px;box-shadow:0 6px 20px rgba(122,30,18,.25)">
+      <div class="h-badge" style="display:inline-flex;align-items:center;gap:9px;background:#870000;border-radius:50px;padding:8px 22px 8px 14px;margin-bottom:22px;box-shadow:0 6px 20px rgba(122,30,18,.25)">
         <span style="width:7px;height:7px;border-radius:50%;background:#FBC04A;animation:pulse 2.4s ease-in-out infinite;display:inline-block"></span>
         <span style="font-size:.7rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#FFE8C2">India's Sacred Ritual Platform</span>
       </div>
@@ -207,16 +228,16 @@
           <h3 class="f-serif" style="font-size:1.875rem;font-weight:700;color:#fff;margin-bottom:10px">Purohit & Puja at Home</h3>
           <p style="font-size:.95rem;line-height:1.7;color:rgba(255,240,224,.8);max-width:380px">Book a verified pandit for Rudrabhishek, Satyanarayan, Griha Pravesh and more — we bring all the samagri.</p>
           <div style="display:flex;align-items:center;gap:14px;margin-top:20px">
-            <span style="display:inline-flex;align-items:center;gap:7px;background:#FFE8C2;color:var(--maroon);font-size:.8rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:11px 22px;border-radius:6px">Book now <svg width="13" height="13" stroke-width="2.2"><use href="#ic-arrow"/></svg></span>
+            <span style="display:inline-flex;align-items:center;gap:7px;background:#fbc04a;color:var(--maroon);font-size:.8rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:11px 22px;border-radius:6px">Book now <svg width="13" height="13" stroke-width="2.2"><use href="#ic-arrow"/></svg></span>
             <span style="color:#FFE8C2;font-size:.9rem;font-weight:600">From ₹7,100</span>
           </div>
         </div>
       </a>
 
       <?php foreach([
-        ['ritual-guides', 'Ritual Guides',   'Step-by-step vidhi, mantras & samagri for every puja.', '#FFF3E8','#B07D08','tag-gold', 'Free',       'ic-book',  'b-a'],
-        ['panchang',      'Panchang',        'Daily tithi, nakshatra & shubh muhurat.',               '#FFFBEE','#B85B08','tag-peach','Live',       'ic-cal',   'b-b'],
-        ['bhajan-mandali','Bhajan Mandali',  'Live sacred music for weddings, namkaran & Navratri occasions.','#F0F6EE','#1E7A3C','tag-sage','On Request','ic-music','b-c'],
+        ['ritual-guides', 'Ritual Guides',   'Step-by-step vidhi, mantras & samagri for every puja.', '#FFF3E8','#870000','tag-gold', 'Free',       'ic-book',  'b-a'],
+        ['panchang',      'Panchang',        'Daily tithi, nakshatra & shubh muhurat.',               '#FFFBEE','#870000','tag-peach','Live',       'ic-cal',   'b-b'],
+        ['bhajan-mandali','Bhajan Mandali',  'Live sacred music for weddings, namkaran & Navratri occasions.','#F0F6EE','#870000','tag-sage','On Request','ic-music','b-c'],
       ] as $i => [$sl,$ti,$de,$bg,$ac,$tg,$pr,$ic,$area]): ?>
       <a href="<?= base_url($sl) ?>" class="off-card <?=$area?>" style="position:relative;display:flex;flex-direction:column;gap:12px;padding:26px;background:<?=$bg?>;border:1px solid var(--line);border-radius:18px;text-decoration:none">
         <div style="display:flex;align-items:center;justify-content:space-between">
@@ -258,9 +279,9 @@
 
     <div style="display:grid;grid-template-columns:1fr;gap:24px" class="steps-grid">
       <?php foreach([
-        ['01','Choose Your Puja',     'Browse from Rudrabhishek, Satyanarayan, Navratri and more. Select your pandit, date and time.','#B07D08','ic-book'],
-        ['02','We Handle Everything', 'Your pandit arrives with all samagri. No running around — just prepare your heart and space.','#B85B08','ic-flame'],
-        ['03','Sacred Experience',    'Every step of the vidhi explained as you go. Your home becomes a temple for the day.','#7A1E12','ic-star'],
+        ['01','Choose Your Puja',     'Browse from Rudrabhishek, Satyanarayan, Navratri and more. Select your pandit, date and time.','#870000','ic-book'],
+        ['02','We Handle Everything', 'Your pandit arrives with all samagri. No running around — just prepare your heart and space.','#870000','ic-flame'],
+        ['03','Sacred Experience',    'Every step of the vidhi explained as you go. Your home becomes a temple for the day.','#870000','ic-star'],
       ] as $i => [$num,$h,$b,$c,$ic]): ?>
       <div class="step-card" data-sr data-d="<?=$i+1?>" style="position:relative;padding:40px 30px 36px;background:#fff;border-radius:16px;border:1px solid var(--line);text-align:center;overflow:hidden;transition:box-shadow .3s,border-color .3s,transform .3s" onmouseover="this.style.borderColor='<?=$c?>';this.style.boxShadow='0 18px 48px rgba(176,125,8,.14)';this.style.transform='translateY(-5px)'" onmouseout="this.style.borderColor='var(--line)';this.style.boxShadow='none';this.style.transform='none'">
         <!-- top accent bar -->
@@ -368,7 +389,12 @@
 <!-- ══════════════════════════════════════
      SUBSCRIBE CTA — compact maroon band
 ══════════════════════════════════════ -->
-<section style="padding:44px 0 0;background:linear-gradient(160deg,#4A0E08 0%,#6E1A10 40%,#8A3008 100%)">
+<section style="padding:44px 0 0;background:linear-gradient(background: linear-gradient(
+160deg,
+#FFFDF8 0%,
+#FFF3E0 45%,
+#FFE0B2 100%
+);)">
   <div data-sr style="max-width:1180px;margin:0 auto;position:relative;overflow:hidden;border-radius:24px;background:linear-gradient(135deg,#7A1E12 0%,#A83410 55%,#B85B08 100%);box-shadow:0 26px 70px rgba(122,30,18,.28);margin-bottom:0">
     <!-- mandala accent -->
     <svg style="position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:340px;height:340px;opacity:.13;animation:spinSlow 110s linear infinite" viewBox="0 0 400 400" fill="none"><?php for($i=0;$i<30;$i++): ?><line x1="200" y1="200" x2="200" y2="20" stroke="#FFE8C2" stroke-width="1" transform="rotate(<?=$i*12?> 200 200)"/><?php endfor; ?><?php foreach([70,130,190] as $r): ?><circle cx="200" cy="200" r="<?=$r?>" stroke="#FFE8C2" stroke-width="1"/><?php endforeach; ?></svg>
@@ -389,7 +415,7 @@
           <span class="f-serif" style="font-size:2.75rem;font-weight:700;color:#fff">₹99</span>
           <span style="font-size:.85rem;color:rgba(255,240,224,.8)">/year · just ₹8/mo</span>
         </div><br>
-        <a href="<?= base_url('subscribe') ?>" style="display:inline-flex;align-items:center;gap:9px;background:#FFE8C2;color:var(--maroon);font-size:.8rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:15px 34px;border-radius:8px;text-decoration:none;box-shadow:0 10px 28px rgba(0,0,0,.18);transition:transform .2s" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'">Subscribe Now <svg width="14" height="14" stroke-width="2.2"><use href="#ic-arrow"/></svg></a>
+        <a href="<?= base_url('subscribe') ?>" style="display:inline-flex;align-items:center;gap:9px;background:#fbc04a;color:var(--maroon);font-size:.8rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:15px 34px;border-radius:8px;text-decoration:none;box-shadow:0 10px 28px rgba(0,0,0,.18);transition:transform .2s" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='none'">Subscribe Now <svg width="14" height="14" stroke-width="2.2"><use href="#ic-arrow"/></svg></a>
       </div>
     </div>
   </div>

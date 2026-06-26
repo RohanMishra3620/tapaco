@@ -55,7 +55,7 @@
       [$col,$ic] = $scStyle[$i % count($scStyle)];
     ?>
     <a href="<?= base_url($sc['href']) ?>"
-       class="lotus-card reveal" style="background:#fff;border:1px solid #EDE5D8;border-radius:14px;padding:16px 14px;text-align:center;text-decoration:none">
+       class="lotus-card reveal" style="background:#FEF5C7;border:1px solid #EDE5D8;border-radius:14px;padding:16px 14px;text-align:center;text-decoration:none">
       <span style="width:44px;height:44px;border-radius:50%;background:<?= $col ?>14;border:1px solid <?= $col ?>33;display:flex;align-items:center;justify-content:center;margin:0 auto 10px">
         <svg width="20" height="20" fill="none" stroke="<?= $col ?>" stroke-width="1.7" viewBox="0 0 24 24"><use href="#<?= $ic ?>"/></svg>
       </span>
@@ -79,7 +79,7 @@
     <?php foreach(['All','Ekadashi','Pradosh','Purnima','Amavasya'] as $f): ?>
     <a href="<?= base_url('panchang/vrat?filter='.strtolower($f)) ?>"
        style="display:inline-block;flex-shrink:0;padding:6px 14px;border-radius:20px;font-size:.75rem;font-weight:600;text-decoration:none;
-              <?= $f==='All'?'background:#5A4A08;color:#fff':'background:#fff;color:#6B4A28;border:1px solid #EDE5D8' ?>">
+              <?= $f==='All'?'background:#5A4A08;color:#fff':'background:#FEF5C7;color:#6B4A28;border:1px solid #EDE5D8' ?>">
       <?= $f ?>
     </a>
     <?php endforeach; ?>
@@ -97,7 +97,7 @@
       $col  = $colors[$i % count($colors)];
     ?>
     <a href="<?= base_url('panchang/vrat/'.$v['slug']) ?>"
-       class="lotus-card reveal" style="display:flex;align-items:center;gap:13px;background:#fff;border:1px solid #EDE5D8;border-radius:14px;padding:14px 16px;text-decoration:none">
+       class="lotus-card reveal" style="display:flex;align-items:center;gap:13px;background:#fbc04a;border:1px solid #EDE5D8;border-radius:14px;padding:14px 16px;text-decoration:none">
       <!-- date block -->
       <div style="width:48px;height:48px;border-radius:12px;background:<?= $col ?>12;border:1px solid <?= $col ?>30;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
         <div style="font-size:.54rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:<?= $col ?>"><?= date('M',$ts) ?></div>
@@ -139,8 +139,8 @@
 
 <!-- TODAY'S FULL PANCHANG CARD -->
 <?php if ($today): ?>
-<div style="margin:14px 16px 28px;background:#fff;border:1px solid #EDE5D8;border-radius:20px;overflow:hidden">
-  <div style="background:linear-gradient(135deg,#1A1A08,#3A3200);padding:14px 18px;display:flex;align-items:center;justify-content:space-between">
+<div style="margin:14px 16px 28px;background:#870000;border:1px solid #EDE5D8;border-radius:20px;overflow:hidden">
+  <div style="background:linear-gradient(135deg,#a00000 20%,#870000 80%);padding:14px 18px;display:flex;align-items:center;justify-content:space-between">
     <p style="font-size:.58rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,220,100,.6)">Today's Full Panchang</p>
     <p style="font-size:.78rem;font-weight:600;color:rgba(255,255,255,.7)"><?= date('l, d F Y') ?></p>
   </div>

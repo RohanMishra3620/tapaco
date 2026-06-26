@@ -17,15 +17,15 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        saffron:  { DEFAULT:'#B85B08', dark:'#8A4106', light:'#D4720A' },  // primary accent
-        deepmar:  { DEFAULT:'#7A1E12', dark:'#5A140A', light:'#A83410' },  // deep maroon — headings
-        ashgray:  { DEFAULT:'#5A3A1A', dark:'#3A1C04', light:'#9A6A38' },  // warm muted body text
-        goldleaf: { DEFAULT:'#B07D08', dark:'#8A6206', light:'#C8A010' },  // aged gold
-        turmeric: { DEFAULT:'#C8A010', dark:'#A07808', light:'#E0B81C' },  // marigold yellow
+        saffron:  { DEFAULT:'#870000', dark:'#8A4106', light:'#fbc04a' },  // primary accent
+        deepmar:  { DEFAULT:'#870000', dark:'#870000', light:'#870000' },  // deep maroon — headings
+        ashgray:  { DEFAULT:'#5A3A1A', dark:'#3A1C04', light:'#870000' },  // warm muted body text
+        goldleaf: { DEFAULT:'#870000', dark:'#870000', light:'#fbc04a' },  // aged gold
+        turmeric: { DEFAULT:'#fbc04a', dark:'#870000', light:'#fbc04a' },  // marigold yellow
         cream:    { DEFAULT:'#F7EFE0', dark:'#EADFC8' },                   // warm surface
-        marigold: '#D4720A',
-        vermil:   '#B0341A',  // vermilion
-        sacred:   '#B85B08',
+        marigold: '#fbc04a',
+        vermil:   '#870000',  // vermilion
+        sacred:   '#870000',
         ivory:    '#FDFAF2',
       },
       fontFamily: {
@@ -67,24 +67,24 @@ button{font-family:inherit;cursor:pointer}
 /* ── Design tokens ── */
 :root{
   --bg:      #FFFFFF;
-  --gold:    #B07D08;
-  --gold2:   #8A6206;
-  --saffron: #B85B08;
-  --maroon:  #7A1E12;
+  --gold:    #870000;
+  --gold2:   #870000;
+  --saffron: #870000;
+  --maroon:  #870000;
   --rose:    #B0566A;
-  --marigold:#C8A010;
+  --marigold:#fbc04a;
   --ink:     #130700;
   --ink2:    #3A1C04;
   --muted:   #6B4A28;
-  --faint:   #9A7A50;
+  --faint:   #870000;
   --line:    #EDE5D8;
   --cream:   #F8F2E8;
   --peach:   #FFF3E8;
   --blush:   #FFF0F4;
   --butter:  #FFFBEE;
-  --sage:    #F0F6EE;
-  --rust:    #C4920A;
-  --rust2:   #A07808;
+  --sage:    #FFF8F8;
+  --rust:    #fbc04a;
+  --rust2:   #870000;
   --dark:    #FFF3E8;
 }
 
@@ -109,11 +109,11 @@ button{font-family:inherit;cursor:pointer}
 /* ── Marigold toran flowers + mango leaves ── */
 .toran{position:absolute;top:0;left:0;right:0;display:flex;justify-content:center;align-items:flex-start;gap:12px;pointer-events:none;z-index:1}
 .toran .hang{transform-origin:top center;animation:pendulum 3.4s ease-in-out infinite;display:flex;flex-direction:column;align-items:center}
-.toran .str{width:1.5px;background:linear-gradient(#9A6A38,#C28A3A);opacity:.6}
+.toran .str{width:1.5px;background:linear-gradient(#870000,#C28A3A);opacity:.6}
 .marigold{width:17px;height:17px;border-radius:50%;
   background:
     radial-gradient(circle at 50% 50%,#B5600E 0 16%,transparent 17%),
-    repeating-conic-gradient(from 0deg,#F6A828 0deg 22.5deg,#DE860F 22.5deg 45deg);
+    repeating-conic-gradient(from 0deg,#fbc04a 0deg 22.5deg,#fbc04a 22.5deg 45deg);
   box-shadow:inset 0 0 0 1px rgba(150,75,8,.35),0 1px 3px rgba(150,75,8,.4)}
 .marigold.sm{width:13px;height:13px}
 .mleaf{width:11px;height:18px;border-radius:0 100% 0 100%;background:linear-gradient(150deg,#4E8C3A,#2E6A28);box-shadow:0 1px 2px rgba(30,70,30,.3);transform:rotate(8deg)}
@@ -126,7 +126,7 @@ button{font-family:inherit;cursor:pointer}
 .shrine-card:hover .shrine-hint{opacity:1;transform:translateX(2px)}
 
 /* ── Restored inner-page components (were in old layout) ── */
-.nudge-card{background:linear-gradient(135deg,#7A1E12 0%,#A83410 100%);color:#fff;box-shadow:0 10px 30px rgba(122,30,18,.18)}
+.nudge-card{background:linear-gradient(135deg,#870000 0%,#870000 100%);color:#fbc04a;box-shadow:0 10px 30px rgba(122,30,18,.18)}
 
 /* ── Category page heroes ── */
 .cat-purohit,.cat-bhajan,.cat-ritual,.cat-panchang{
@@ -134,22 +134,22 @@ button{font-family:inherit;cursor:pointer}
   border:none!important;border-radius:0!important;margin:0!important;box-shadow:none!important;
   padding:44px 28px 36px!important;
 }
-.cat-purohit{background:linear-gradient(135deg,#3A0A06 0%,#6E1810 55%,#9A3010 100%)!important}
-.cat-bhajan {background:linear-gradient(135deg,#1A0844 0%,#3A1480 55%,#5A1E90 100%)!important}
-.cat-ritual {background:linear-gradient(135deg,#0E2A14 0%,#1C5228 55%,#2E6E38 100%)!important}
-.cat-panchang{background:linear-gradient(135deg,#1A1A08 0%,#3A3200 55%,#5A4A08 100%)!important}
+.cat-purohit{background:linear-gradient(135deg,#a00000 20%,#870000 80%)!important}
+.cat-bhajan {background:linear-gradient(135deg,#a00000 20%,#870000 80%)!important}
+.cat-ritual {background:linear-gradient(135deg,#a00000 20%,#870000 80%)!important}
+.cat-panchang{background:linear-gradient(135deg,#a00000 20%,#870000 80%)!important}
 /* decorative glow blob */
 .cat-purohit::before,.cat-bhajan::before,.cat-ritual::before,.cat-panchang::before{
   content:'';position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;opacity:.18;pointer-events:none}
 .cat-purohit::before{background:radial-gradient(circle,#FBC04A,transparent 70%)}
 .cat-bhajan::before{background:radial-gradient(circle,#A070FF,transparent 70%)}
 .cat-ritual::before{background:radial-gradient(circle,#60D890,transparent 70%)}
-.cat-panchang::before{background:radial-gradient(circle,#FFD060,transparent 70%)}
+.cat-panchang::before{background:radial-gradient(circle,#fbc04a,transparent 70%)}
 /* force text inside heroes to white, but not colored CTA buttons */
 .cat-purohit p,.cat-purohit h1,.cat-purohit h2,.cat-purohit span,.cat-purohit svg,
 .cat-bhajan p,.cat-bhajan h1,.cat-bhajan h2,.cat-bhajan span,.cat-bhajan svg,
 .cat-ritual p,.cat-ritual h1,.cat-ritual h2,.cat-ritual span,.cat-ritual svg,
-.cat-panchang p,.cat-panchang h1,.cat-panchang h2,.cat-panchang span,.cat-panchang svg{color:#fff!important}
+.cat-panchang p,.cat-panchang h1,.cat-panchang h2,.cat-panchang span,.cat-panchang svg{color:#fbc04a!important}
 .cat-purohit .text-saffron,.cat-bhajan .text-saffron,.cat-ritual .text-saffron,.cat-panchang .text-saffron{color:rgba(255,255,255,.6)!important}
 .cat-purohit .text-ashgray,.cat-bhajan .text-ashgray,.cat-ritual .text-ashgray,.cat-panchang .text-ashgray{color:rgba(255,255,255,.55)!important}
 @media(max-width:640px){
@@ -225,7 +225,7 @@ button{font-family:inherit;cursor:pointer}
 
 /* wordmark */
 .wordmark{display:flex;flex-direction:column;align-items:flex-start;line-height:1;text-decoration:none}
-.wordmark-name{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.25rem;color:#7A1E12;letter-spacing:.01em}
+.wordmark-name{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.25rem;color:#870000;letter-spacing:.01em}
 .wordmark-sub{font-size:.48rem;letter-spacing:.26em;text-transform:uppercase;color:#B0906A;margin-top:4px}
 
 /* nav links */
@@ -237,24 +237,132 @@ button{font-family:inherit;cursor:pointer}
 @media(min-width:1024px){.nav-links{display:flex}}
 
 /* ── Buttons — premium rectangles, not pills ── */
-.btn{display:inline-flex;align-items:center;gap:8px;font-size:.8125rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border:none;cursor:pointer;transition:all .25s;text-decoration:none;position:relative;overflow:hidden;border-radius:4px}
-.btn::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);transform:translateX(-110%);transition:transform .55s ease}
-.btn:hover::after{transform:translateX(110%)}
-.btn-gold{background:var(--gold);color:#fff;padding:13px 32px}
-.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(196,146,10,.3)}
-.btn-outline{background:transparent;color:var(--gold);border:1.5px solid var(--gold);padding:11px 30px}
-.btn-outline:hover{background:var(--gold);color:#fff;transform:translateY(-2px)}
-.btn-ghost{background:none;border:none;padding:0;font-size:.8125rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--gold)}
-.btn-ghost:hover{color:var(--gold2)}
-/* backward compat */
-.btn-ink{background:var(--gold);color:#fff;padding:13px 32px;border-radius:4px}
-.btn-ink:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(196,146,10,.3)}
-.btn-primary{background:var(--gold);color:#fff;padding:13px 32px}
-.btn-primary:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(196,146,10,.3)}
-.btn-accent{background:var(--saffron);color:#fff;padding:13px 32px}
-.btn-accent:hover{background:var(--gold);transform:translateY(-2px)}
-.btn-line{background:transparent;color:var(--gold);border:1.5px solid var(--gold);padding:11px 30px;border-radius:4px}
-.btn-line:hover{background:var(--gold);color:#fff}
+.btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:.8125rem;
+    font-weight:600;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    border:none;
+    cursor:pointer;
+    transition:all .25s;
+    text-decoration:none;
+    position:relative;
+    overflow:hidden;
+    border-radius:4px;
+}
+
+.btn::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);
+    transform:translateX(-110%);
+    transition:transform .55s ease;
+}
+
+.btn:hover::after{
+    transform:translateX(110%);
+}
+
+/* Gold Button */
+.btn-gold{
+    background:#fbc04a;
+    color:#000;
+    border:1px solid #fbc04a;
+    padding:13px 32px;
+}
+
+.btn-gold:hover{
+    background:#870000;
+    border-color:#870000;
+    color:#fbc04a;
+    transform:translateY(-2px);
+    box-shadow:0 8px 32px rgba(135,0,0,.30);
+}
+
+.btn-gold:focus,
+.btn-gold:active{
+    background:#870000;
+    border-color:#870000;
+    color:#fbc04a;
+}
+
+/* Outline Button */
+.btn-outline{
+    background:transparent;
+    color:#fbc04a;
+    border:1.5px solid #fbc04a;
+    padding:11px 30px;
+}
+
+.btn-outline:hover{
+    background:#870000;
+    border-color:#870000;
+    color:#fbc04a;
+    transform:translateY(-2px);
+}
+
+/* Ghost Button */
+.btn-ghost{
+    background:none;
+    border:none;
+    padding:0;
+    font-size:.8125rem;
+    font-weight:600;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:#fbc04a;
+}
+
+.btn-ghost:hover{
+    color:#870000;
+}
+
+/* Backward compatibility */
+.btn-ink,
+.btn-primary{
+    background:#fbc04a;
+    color:#000;
+    padding:13px 32px;
+    border-radius:4px;
+}
+
+.btn-ink:hover,
+.btn-primary:hover{
+    background:#870000;
+    color:#fbc04a;
+    box-shadow:0 8px 32px rgba(135,0,0,.30);
+    transform:translateY(-2px);
+}
+
+.btn-accent{
+    background:#fbc04a;
+    color:#000;
+    padding:13px 32px;
+}
+
+.btn-accent:hover{
+    background:#870000;
+    color:#fbc04a;
+    transform:translateY(-2px);
+}
+
+.btn-line{
+    background:transparent;
+    color:#fbc04a;
+    border:1.5px solid #fbc04a;
+    padding:11px 30px;
+    border-radius:4px;
+}
+
+.btn-line:hover{
+    background:#870000;
+    border-color:#870000;
+    color:#fbc04a;
+}
 
 /* ── Cards ── */
 .card{background:#fff;border:1px solid #EDE5D8;border-radius:16px;overflow:hidden;transition:box-shadow .22s,transform .22s;box-shadow:0 1px 4px rgba(0,0,0,.04)}
@@ -263,9 +371,9 @@ button{font-family:inherit;cursor:pointer}
 /* ── Tags ── */
 .tag{display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:3px}
 .tag-gold   {background:#FFF3DC;color:#8A6200;border:1px solid #E8D080}
-.tag-peach  {background:#FFF3E8;color:#8A4800;border:1px solid #E8C8A0}
-.tag-rose   {background:#FFF0F4;color:#8A3048;border:1px solid #E8B8C8}
-.tag-sage   {background:#F0F6EE;color:#2A5A28;border:1px solid #B0D0A8}
+.tag-peach  {background:#FFF3E8;color:#870000;border:1px solid #E8C8A0}
+.tag-rose   {background:#FFF0F4;color:#870000;border:1px solid #E8B8C8}
+.tag-sage   {background:#FFF8F8;color:#870000;border:1px solid #B0D0A8}
 
 /* ── Form fields ── */
 .field{width:100%;padding:13px 16px;border-radius:6px;border:1.5px solid var(--line);background:#fff;font-size:.9375rem;color:var(--ink);font-family:'Inter',sans-serif;outline:none;transition:border-color .22s,box-shadow .22s}
@@ -291,12 +399,12 @@ button{font-family:inherit;cursor:pointer}
 .bnav-i{
   flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;
   padding:10px 2px 12px;
-  color:#9A7A58;text-decoration:none;
+  color:#870000;text-decoration:none;
   font-size:.54rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
   transition:color .15s;position:relative
 }
 .bnav-i:active{opacity:.7}
-.bnav-i.on{color:#7A1E12}
+.bnav-i.on{color:#870000}
 .bnav-i.on svg{filter:drop-shadow(0 0 6px rgba(122,30,18,.35))}
 .bnav-i.on::before{
   content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);
@@ -330,8 +438,8 @@ button{font-family:inherit;cursor:pointer}
 .flourish i::before{content:'';position:absolute}
 
 /* ── Status ── */
-.s-ok  {background:#ECFDF5;color:#065F46}
-.s-wait{background:#FFFBEB;color:#92400E}
+.s-ok  {background:#FFF8F8;color:#870000}
+.s-wait{background:#FFFBEB;color:#870000}
 .s-no  {background:#FEF2F2;color:#991B1B}
 
 /* ── Page entrance ── */
@@ -411,12 +519,12 @@ main{animation:scaleIn .45s cubic-bezier(.22,1,.36,1)}
 
       <?php if(session()->get('user_id')): ?>
       <a href="<?= base_url('account') ?>">
-        <div style="width:34px;height:34px;border-radius:50%;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:.9375rem">
+        <div style="width:34px;height:34px;border-radius:50%;background:var(--gold);color:#fbc04a;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:.9375rem">
           <?= strtoupper(substr(session()->get('user_name') ?? 'D', 0, 1)) ?>
         </div>
       </a>
       <?php else: ?>
-      <a href="<?= base_url('login') ?>" style="display:inline-flex;align-items:center;gap:7px;padding:9px 20px;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#7A1E12;color:#fff;border-radius:8px;text-decoration:none;transition:background .2s" onmouseover="this.style.background='#5A1008'" onmouseout="this.style.background='#7A1E12'">Login</a>
+      <a href="<?= base_url('login') ?>" style="display:inline-flex;align-items:center;gap:7px;padding:9px 20px;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#870000;color:#ffff;border-radius:8px;text-decoration:none;transition:background .2s" onmouseover="this.style.background='#870000'" onmouseout="this.style.background='#fbc04a'">Login</a>
       <?php endif; ?>
 
       <button id="hamBtn" aria-label="Menu" style="display:flex;flex-direction:column;justify-content:center;gap:5px;width:34px;height:34px;border:1px solid var(--line);background:none;padding:7px;border-radius:50%;transition:border-color .22s" class="ham-vis" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--line)'">
@@ -498,9 +606,10 @@ main{animation:scaleIn .45s cubic-bezier(.22,1,.36,1)}
 </style>
 
 <!-- ═══ FOOTER ═══ -->
-<footer style="background:linear-gradient(160deg,#4A0E08 0%,#6E1A10 40%,#8A3008 100%);margin-top:0;position:relative;overflow:hidden">
+<footer style="background: linear-gradient(135deg,#a00000 20%,#870000 80%
+);   margin-top:0;position:relative;overflow:hidden">
   <!-- top divider wave -->
-  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#FBC04A 30%,#C4920A 60%,transparent)"></div>
+  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#FBC04A 30%,#fbc04a 60%,transparent)"></div>
 
   <div style="max-width:1200px;margin:0 auto;padding:56px 32px 0;position:relative">
 
@@ -548,10 +657,10 @@ main{animation:scaleIn .45s cubic-bezier(.22,1,.36,1)}
       <!-- Subscribe card -->
       <div style="background:rgba(251,192,74,.1);border:1px solid rgba(251,192,74,.25);border-radius:18px;padding:26px">
         <p style="font-size:.6rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#FBC04A;margin-bottom:10px">Daily on WhatsApp</p>
-        <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:#fff;line-height:1.25;margin-bottom:8px">Never miss a tithi or vrat</h4>
+        <h4 style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:#fbc04a;line-height:1.25;margin-bottom:8px">Never miss a tithi or vrat</h4>
         <p style="font-size:.85rem;color:rgba(255,232,194,.7);line-height:1.6;margin-bottom:18px">Panchang, reminders & guides — just ₹99 a year.</p>
         <a href="<?= base_url('subscribe') ?>" style="display:inline-flex;align-items:center;gap:8px;background:#FBC04A;color:#5A0E08;font-size:.78rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:12px 22px;border-radius:8px;text-decoration:none;transition:background .2s"
-           onmouseover="this.style.background='#FFD060'"
+           onmouseover="this.style.background='#fbc04a'"
            onmouseout="this.style.background='#FBC04A'">Subscribe ₹99 <svg width="13" height="13" stroke="currentColor" stroke-width="2.4" fill="none" viewBox="0 0 24 24"><use href="#ic-arrow"/></svg></a>
       </div>
     </div>
